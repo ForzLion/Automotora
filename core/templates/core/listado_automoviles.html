@@ -1,0 +1,41 @@
+{% extends 'core/base.html' %} {% block contenido %}
+
+<h1>Listado de automoviles</h1>
+
+<table>
+    <tr>
+        <th>Patente</th>
+        <th>Marca</th>
+        <th>Modelo</th>
+        <th>Año</th>
+        <th>Opciones</th>
+    </tr>
+    {# por cada fila de la BBDD creamos una fila de la tabla #}
+     {% for a in autos %}
+
+    <tr>
+        <td>{{ a.patente }}</td>
+        <td>{{ a.marca.nombre }}</td>
+        <td>{{ a.modelo }}</td>
+        <td>{{ a.anio }}</td>
+        <td>
+            <a href="{% url 'eliminar' a.id %}">Eliminar</a>
+            <a href="{% url 'modificar' a.id %}">Modificar</a>
+        </td>
+    </tr>
+
+    {% endfor %}
+
+
+</table>
+
+<!--Primero preguntamos si hay mensajes que mostrar-->
+
+{% if messages %}
+<!--recorremos todos los mensajes y los mostramos-->
+    {% for m in messages %}
+        <div>{{ m }}</div>
+    {% endfor %}
+{% endif %}
+
+{% endblock contenido %}

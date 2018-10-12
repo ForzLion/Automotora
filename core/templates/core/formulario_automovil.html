@@ -1,0 +1,33 @@
+{% extends 'core/base.html' %}
+
+
+{% block contenido %}
+
+<form action="" method="post">
+    <!--comentario-->
+    
+    {% csrf_token %}
+    <label for="">Patente</label>
+    <input type="text" name="txtPatente" id="txtPatente">
+    <br>
+    <label for="">Marca</label>
+    <select name="cboMarca" id="cboMarca">
+        <option value="">Seleccionar</option>
+        {% for m in marcas %}
+            <option value="{{ m.id }}">{{ m.nombre }}</option>
+        {% endfor %}
+    </select>
+    <br>
+    <label for="">Modelo</label>
+    <input type="text" name="txtModelo" id="txtModelo">
+    <br>
+    <label for="">Año</label>
+    <input type="number" name="txtAnio" id="txtAnio">
+    <br>
+    <input type="submit" value="Guardar">
+
+</form>
+
+<h3>{{ mensaje }}</h3>
+
+{% endblock contenido %}

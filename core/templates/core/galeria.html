@@ -1,0 +1,15 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block contenido %}
+
+<div class="galeria">
+    <a data-fancybox="gallery" href="{% static 'core/img/automovil.png' %}"><img src="{% static 'core/img/automovil.png' %}"></a>
+    <a data-fancybox="gallery" href="{% static 'core/img/auto2.png' %}"><img src="{% static 'core/img/auto2.png' %}"></a>
+    <a data-fancybox="gallery" href="{% static 'core/img/auto3.png' %}"><img src="{% static 'core/img/auto3.png' %}"></a>
+    <a data-fancybox="gallery" href="{% static 'core/img/deportivo.png' %}"><img src="{% static 'core/img/deportivo.png' %}"></a>
+</div>
+
+
+{% endblock contenido %}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Automotora</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'core/css/estilos.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script src="{% static 'core/js/inicializacion.js' %}"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
+    
+</head>
+<body>
+    <!--este es un comentario-->
+   <header>
+       <img class="logo" src="{% static 'core/img/automovillogo.jpg' %}" alt="logo">
+       <ul class="navegacion">
+           <li>
+               <a href="http://www.google.cl">Home</a>
+           </li>
+           <li>
+               <a href="#">Contacto</a>
+           </li>
+           <li>
+               <a href="#">Historia</a>
+           </li>
+       </ul>
+    </header>
+    <div class="landing">
+        <div class="slider">
+            <div>
+                <img title="automovil gris" class="imagen_landing" src="{% static 'core/img/automovil.png' %}" alt="automovil">   
+            </div>
+            <div>
+                <img title="automovil rojo" class="imagen_landing" src="{% static 'core/img/auto2.png' %}" alt="automovil">   
+            </div>
+            <div>
+                <img title="automovil blanco" class="imagen_landing" src="{% static 'core/img/auto3.png' %}" alt="automovil">   
+            </div>
+        </div>
+       
+        <div class="landing_inferior">
+            <h1 class="color_blanco centrar_texto">La mejor automotora del país</h1>
+            <h1 class="color_blanco centrar_texto">+569 99999999</h1>
+            <ul class="social">
+                <li>
+                    <a href="http://twitter.com">
+                        <img src="{% static 'core/img/social-twitter.png' %}" alt="twitter">
+                    </a>
+                </li>
+                <li><img src="{% static 'core/img/socialfacebook.png' %}" alt="facebook"></li>
+                <li><img src="{% static 'core/img/social-inst.png' %}" alt="instagram"></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="contenido">
+       
+    </div>
+    
+        {% block contenido %}
+        
+        {% endblock contenido %}
+
+    <footer>
+      
+        <h3 class="color_blanco centrar_texto">Todos los derechos reservados</h3>
+        <hr>
+        <h3 class="color_blanco centrar_texto">2018</h3>
+    </footer>
+ 
+</body>
+</html>

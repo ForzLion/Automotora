@@ -1,0 +1,213 @@
+
+* {
+    /*los estilos que esten aqui dentro
+    aplicaran a todos los elementos*/
+    margin:0;
+    padding: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.bx-wrapper {
+    background-color:#e51e3f!important;
+    border:none!important;
+    box-shadow: none!important;
+}
+
+.galeria img {
+    width: 300px;
+    height: auto;
+}
+
+header {
+    width: 100%;
+    height: 80px;
+    background-color: #a10d21;
+    display: flex;
+    /*
+    valores posibles de la propiedad justify-content
+    alineacion a la izquierda = flex-start;
+    alineacion a la derecha  = flex-end;
+    alineacion central = center
+    espacio entre cada elemento = space-between
+    espacio fuera de cada elemento = space-around;
+    */
+    justify-content: space-between;
+}
+
+.logo {
+    width: 180px;
+    height: 60px;
+    /*este es un comentario*/
+    margin-top:10px;
+    margin-left:10px;
+}
+
+.navegacion {
+    float:right;
+    margin-top: 20px;
+}
+
+.navegacion li {
+    display: inline-block;
+    margin-right: 20px;
+    width: 100px;
+    height: 36px;
+    background-color: #d61010;
+    text-align: center;
+    padding-top: 16px;
+    transition: border-radius 0.5s;
+}
+
+.navegacion li:hover {
+    /*estos estilos se aplicaran cuando se pase el mouse por encima
+    del elemento*/
+
+    border-radius: 20px;
+
+}
+
+.navegacion li a {
+    color:white;
+    font-weight: bold;
+}
+
+.landing {
+    width: 100%;
+    height: 520px;
+    background-color: #e51e3f;
+}
+
+.imagen_landing {
+    width: 900px;
+    height: 400px;
+    margin:auto;
+    display: block;
+}
+
+.eslogan {
+    color:white;
+    margin-left: 20px;
+    font-size: 36px;
+    float: left;
+}
+
+.social {
+    float:right;
+}
+
+.social li {
+    display:inline-block;
+    margin-right: 25px;
+}
+
+.social li img {
+    width: 50px;
+    height: 50px;
+    transition: all 1s;
+}
+/*
+.social li:hover {
+    esto se hace para poner una imagen de fondo a un elemento
+    background-image: url('ruta/archivo.png');
+}*/
+
+.social li img:hover {
+    transform: scale(1.3);
+    
+}
+
+.color_blanco {
+    color:white;
+}
+
+.contenido {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contenido > div {
+    width: 50%;
+}
+
+footer {
+    height: 300px;
+    background-color: #9e9e9e;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.centrar_texto {
+    text-align: center;
+}
+
+.color_blanco {
+    color:white;
+}
+/*
+@media(max-width:900px) {
+
+}*/
+
+.landing_inferior {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+@media (max-width:1024px) {
+
+    .landing_inferior {
+        flex-direction: column-reverse;
+    }
+
+    .contenido {
+        flex-direction: column;
+    }
+
+    .contenido > div {
+        width: 100%;
+    }
+
+    /*los estilos que estan aqui dentro de esta media query
+    se aplicaran a pantallas con ancho maximo de 1024px (moviles)*/
+    .imagen_landing {
+        width: 100%;
+        height: auto;
+        /*display: none;*/
+    }
+
+    .eslogan {
+        text-align: center;
+        float:none;
+    }
+
+    .social {
+        float:none;
+        text-align: center;
+    }
+
+    header {
+        height: 350px;
+    }
+
+    .navegacion {
+       float:none;
+       width: 80%;
+       margin:auto;
+    }
+
+    .navegacion li {
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .landing {
+        height: auto;
+    }
+}
+
+
+
